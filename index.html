@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,71 @@
     <title>Pizza Rendelő rendszer</title>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Pizza Rendelő</h1>
+            <p>Válassz ki a legalább jobb pizzáid</p>
+        </header>
+
+        <main>
+            <section class="menu-section">
+                <h2>Pizza Méret</h2>
+                <div class="size-options" id="sizes"></div>
+            </section>
+
+            <section class="menu-section">
+                <h2>Szósz kiválasztása</h2>
+                <select id="sauce">
+                    <option value="">Válassz szószt...</option>
+                </select>
+            </section>
+
+            <section class="menu-section">
+                <h2>Feltétek (1 vagy több)</h2>
+                <div id="feltetek" class="toppings-container"></div>
+            </section>
+
+            <section class="menu-section">
+                <div class="summary-box">
+                    <h3>Megrendelés összesen</h3>
+                    <div class="price-details">
+                        <p>Alap ár: <span id="base-price">2000</span> Ft</p>
+                        <p>Méret: <span id="size-price">0</span> Ft</p>
+                        <p>Szósz: <span id="sauce-price">0</span> Ft</p>
+                        <p>Feltétek: <span id="toppings-price">0</span> Ft</p>
+                    </div>
+                    <div class="total-price">
+                        <strong>Végösszesen: <span id="total-price">2000</span> Ft</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-section">
+                <h3>Szállítási adatok</h3>
+                <div class="form-group">
+                    <label for="name">Név:</label>
+                    <input type="text" id="name" placeholder="A te neved">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefonszám:</label>
+                    <input type="tel" id="phone" placeholder="+36 30 123 4567">
+                </div>
+                <div class="form-group">
+                    <label for="address">Cím:</label>
+                    <input type="text" id="address" placeholder="Utca, házszám">
+                </div>
+                <div class="form-group">
+                    <label for="note">Megjegyzés:</label>
+                    <textarea id="note" placeholder="Pl. extra sajtot szeretnék"></textarea>
+                </div>
+            </section>
+
+            <button class="order-btn" id="order-btn">Megrendelés</button>
+        </main>
+
+    
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
